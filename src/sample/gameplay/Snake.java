@@ -22,11 +22,11 @@ public class Snake{
         return snakebody;
     }
 
-    public Snake (int x, int y, int size){
+    public Snake (int x, int y, int size, GameData data){
         _size = size;
         snakebody = new Group();
         snake = snakebody.getChildren();
-        currentSkin = SnakeSkin.Red;
+        currentSkin = data.getCurrentSkin();
 
 
 

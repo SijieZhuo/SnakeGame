@@ -8,11 +8,14 @@ import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import sample.gameplay.*;
+import sample.views.main.MainApp;
 import sample.views.menu.MainMenu;
+import sample.views.menu.MenuView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,6 +41,9 @@ public class Game extends AnchorPane implements Initializable {
 
     @FXML
     AnchorPane pane;
+
+    @FXML
+    Button back;
 
     private void timeAction(){
 
@@ -92,6 +98,7 @@ public class Game extends AnchorPane implements Initializable {
 
     public void setup(GameLevel level, boolean hasEdge, GameData data){
 
+
         gameData = data;
         score = 0;
 
@@ -105,6 +112,9 @@ public class Game extends AnchorPane implements Initializable {
 
         this.hasEdge = hasEdge;
 
+        snake = new Snake(5 * SIZE, 5 * SIZE, SIZE, gameData);
+        foodObj = new Food(APP_W, APP_H, SIZE);
+
         keyAction();
         timeAction();
 
@@ -116,10 +126,10 @@ public class Game extends AnchorPane implements Initializable {
     private boolean mapWithEdge(){
         boolean collide = false;
         Node head = snake.getSnake().get(0);
-        if (head.getTranslateX()>APP_W
-                || head.getTranslateX()<0
-                || head.getTranslateY()>APP_H
-                || head.getTranslateY()<0){
+        if (head.getTranslateX()>=APP_W
+                || head.getTranslateX()<=0
+                || head.getTranslateY()>=APP_H
+                || head.getTranslateY()<=0){
             collide = true;
         }
         return collide;
@@ -128,14 +138,18 @@ public class Game extends AnchorPane implements Initializable {
     private boolean mapNoEdge(){
         Node head = snake.getSnake().get(0);
 
-        if(head.getTranslateX() < 0) // to the left screen
-            head.setTranslateX(APP_W-SIZE);
-        if(head.getTranslateX() >= APP_W) // right screen
+        if(head.getTranslateX() < 0) { // to the left screen
+            head.setTranslateX(APP_W - SIZE);
+        }
+        if(head.getTranslateX() >= APP_W) { // right screen
             head.setTranslateX(0.0);
-        if(head.getTranslateY() < 0) //top screen
-            head.setTranslateY(APP_H-SIZE);
-        if(head.getTranslateY() >= APP_H) //down screen
+        }
+        if(head.getTranslateY() < 0) { //top screen
+            head.setTranslateY(APP_H - SIZE);
+        }
+        if(head.getTranslateY() >= APP_H) { //down screen
             head.setTranslateY(0.0);
+        }
         return false;
     }
 
@@ -178,7 +192,6 @@ public class Game extends AnchorPane implements Initializable {
         snake.getSnake().clear();
         snake.initialize(5 * SIZE, 5 * SIZE);
         direction = Direction.RIGHT;
-        System.out.println(score);
         score = 0;
     }
 
@@ -206,14 +219,16 @@ public class Game extends AnchorPane implements Initializable {
 
     }
 
+    public void backHit(){
+        timeline.stop();
+        MenuView menuView = new MenuView();
+        MainApp.getInstance().changeCentre(menuView);
+        MainMenu menu = (MainMenu) menuView.controller();
+        menu.setup(gameData);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        snake = new Snake(5 * SIZE, 5 * SIZE, SIZE);
-        foodObj = new Food(APP_W, APP_H, SIZE);
         this.setMaxSize(APP_W,APP_H);
-        //snake.setSkin(SnakeSkin).
-
-
     }
 }

@@ -12,8 +12,22 @@ public  class Skins {
     }
 
     public void setSkin(SnakeSkin skin, SnakeBody body){
-        if(skin.equals(SnakeSkin.Red)){
-            setRedSkin(body);
+        switch (skin){
+            case Black:
+                setBlackSkin(body);
+                break;
+            case Red:
+                setRedSkin(body);
+                break;
+            case Blue:
+                setBlueSkin(body);
+                break;
+            case Green:
+                setGreenSkin(body);
+                break;
+            case Yellow:
+                setYellowSkin(body);
+                break;
         }
     }
 
@@ -27,6 +41,16 @@ public  class Skins {
 
     private void setBlackSkin(SnakeBody body){
         body.setFill(Color.BLACK);
+    }
+
+    private void setBlueSkin(SnakeBody body){
+        body.setFill(Color.BLUE);
+    }
+    private void setGreenSkin(SnakeBody body){
+        body.setFill(Color.GREEN);
+    }
+    private void setYellowSkin(SnakeBody body){
+        body.setFill(Color.YELLOW);
     }
 
     public static Skins getInstance(){

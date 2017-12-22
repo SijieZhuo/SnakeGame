@@ -61,10 +61,10 @@ public class ItemPane extends VBox implements Initializable {
             data.useScore(item.getPrice());
             button.setText("Change");
             item.hasBought();
-            data.save();
-            MainMenu.getInstance().updateScore();
-            System.out.println(data.getScore());
+
         }
+        data.save();
+        MainMenu.getInstance().updateScore();
     }
 
     @Override
