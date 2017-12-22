@@ -1,14 +1,11 @@
 package sample.gameplay;
 
-import javafx.scene.Node;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 public  class Skins {
 
     private static Skins instance;
-    private Snake snake;
-    SnakeSkin snakeSkin;
+
 
     public Skins(){
         instance = this;
@@ -22,12 +19,14 @@ public  class Skins {
 
     private void setRedSkin(SnakeBody body){
         if(body.getType().equals(SnakeBodyType.Head)){
-            body.setFill(Color.BLACK);
-            System.out.println("HEad");
-        }else{
             body.setFill(Color.RED);
-            System.out.println("notHEad");
+        }else{
+            body.setFill(Color.web("#ff6060"));
         }
+    }
+
+    private void setBlackSkin(SnakeBody body){
+        body.setFill(Color.BLACK);
     }
 
     public static Skins getInstance(){

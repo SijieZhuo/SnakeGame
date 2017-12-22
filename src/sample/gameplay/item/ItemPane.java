@@ -9,7 +9,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import sample.gameplay.GameData;
+import sample.gameplay.ItemType;
+import sample.gameplay.SnakeSkin;
 import sample.views.menu.MainMenu;
+import sample.views.shop.GameShop;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,7 +34,11 @@ public class ItemPane extends VBox implements Initializable {
         this.data = gameData;
         text.setText(item.getName());
         if(item.getBought()){
-            button.setText("Change");
+            if(data.getCurrentSkin().toString().equals(item.getName())){
+                button.setText("Current");
+            }else {
+                button.setText("Change");
+            }
         } else {
             button.setText(item.getPrice() + "");
         }
@@ -40,6 +47,12 @@ public class ItemPane extends VBox implements Initializable {
     @FXML
     public void buttonHit() {
         if (item.getBought()) {
+            if(item instanceof SkinItem) {
+                data.setCurrentSkin(SnakeSkin.getSkin(item.getName()));
+                GameShop.getInstance().setup(data);
+            } else {
+
+            }
 
         } else {
             if(data.getScore()<item.getPrice()){
@@ -54,15 +67,7 @@ public class ItemPane extends VBox implements Initializable {
         }
     }
 
-
-
-    public void test(){
-        System.out.println(item.getName() + item.getPrice());
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        this.setSpacing(50);
-//        this.setPrefSize(100, 120);
     }
 }

@@ -28,11 +28,10 @@ public class Snake{
         snake = snakebody.getChildren();
         currentSkin = SnakeSkin.Red;
 
+
+
         initialize(x,y);
 
-
-
-        System.out.println(snake.size());
 
     }
 

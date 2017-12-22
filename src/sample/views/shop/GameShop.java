@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 public class GameShop implements Initializable {
 
 
-
+    private static GameShop instance;
     private Shop shop;
     private GameData gameData;
 
@@ -35,6 +35,7 @@ public class GameShop implements Initializable {
     Button back;
 
     public void setup(GameData data){
+        hBox.getChildren().clear();
         gameData = data;
         shop = gameData.getShop();
 
@@ -53,9 +54,13 @@ public class GameShop implements Initializable {
         menu.setup(gameData);
     }
 
+    public static GameShop getInstance(){
+        return instance;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        instance = this;
 
 
     }

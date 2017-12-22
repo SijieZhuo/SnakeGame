@@ -1,7 +1,6 @@
 package sample.gameplay.item;
 
 import java.io.Serializable;
-import java.util.HashMap;
 
 public class Item implements Serializable{
 
@@ -13,8 +12,8 @@ public class Item implements Serializable{
         _name = name;
         _bought = false;
         _price = price;
-
     }
+
 
     public void hasBought(){
         _bought = true;
