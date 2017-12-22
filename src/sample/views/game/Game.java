@@ -176,7 +176,7 @@ public class Game extends AnchorPane implements Initializable {
 
     private void gameOver(){
         snake.getSnake().clear();
-        snake.initialize(5 * SIZE, 5 * SIZE, SIZE);
+        snake.initialize(5 * SIZE, 5 * SIZE);
         direction = Direction.RIGHT;
         System.out.println(score);
         score = 0;
@@ -212,6 +212,7 @@ public class Game extends AnchorPane implements Initializable {
         snake = new Snake(5 * SIZE, 5 * SIZE, SIZE);
         foodObj = new Food(APP_W, APP_H, SIZE);
         this.setMaxSize(APP_W,APP_H);
+        //snake.setSkin(SnakeSkin).
 
 
     }

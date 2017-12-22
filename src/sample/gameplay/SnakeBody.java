@@ -20,6 +20,7 @@ public class SnakeBody extends Rectangle {
         Skins.getInstance().setSkin(skin, this);
     }
 
+
     public void setBodyType(SnakeBodyType type){
         this.type = type;
     }

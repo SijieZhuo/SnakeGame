@@ -21,7 +21,13 @@ public  class Skins {
     }
 
     private void setRedSkin(SnakeBody body){
-        body.setFill(Color.RED);
+        if(body.getType().equals(SnakeBodyType.Head)){
+            body.setFill(Color.BLACK);
+            System.out.println("HEad");
+        }else{
+            body.setFill(Color.RED);
+            System.out.println("notHEad");
+        }
     }
 
     public static Skins getInstance(){

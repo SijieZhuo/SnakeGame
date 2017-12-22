@@ -26,33 +26,31 @@ public class Snake{
         _size = size;
         snakebody = new Group();
         snake = snakebody.getChildren();
-
-
-        initialize(x,y,size);
         currentSkin = SnakeSkin.Red;
-        setSkin(currentSkin);
+
+        initialize(x,y);
+
+
 
         System.out.println(snake.size());
 
     }
 
-    public void initialize(int x, int y, int size){
+    public void initialize(int x, int y){
         this.addBody(x, y);
         this.addBody(x-_size, y);
         this.addBody(x - 2 * _size, y);
         this.addBody(x - 3 * _size, y);
         this.addBody(x - 4 * _size, y);
 
-
-
-
+        skinUpdate();
     }
 
 
     public void addBody(double x, double y){
 
         SnakeBody newbody = new SnakeBody(_size);
-        newbody.setSkin(SnakeSkin.Red);
+        newbody.setSkin(currentSkin);
 
         newbody.setTranslateX(x);
         newbody.setTranslateY(y);
@@ -83,10 +81,24 @@ public class Snake{
                 break;
         }
             snake.add(0, _tail);
+            skinUpdate();
     }
 
-    public void setSkin(SnakeSkin snakeSkin){
-        //skin.setSkin(snakeSkin);
+    public void skinUpdate(){
+
+
+
+        for(Node n : snake){
+
+            if(n instanceof SnakeBody){
+                if(n == snake.get(0)){
+                     ((SnakeBody) n).setBodyType(SnakeBodyType.Head);
+                } else {
+                    ((SnakeBody) n).setBodyType(SnakeBodyType.Body);
+                }
+                ((SnakeBody) n).setSkin(currentSkin);
+            }
+        }
     }
 
 }
