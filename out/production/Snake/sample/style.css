@@ -1,0 +1,61 @@
+.mainBackground{
+
+    -fx-background-color: #4ab0e3;
+
+}
+
+.gameBackground{
+
+    -fx-background-color: #3cda05;
+
+
+    -fx-max-width: 500;
+    -fx-max-height: 300;
+
+}
+
+.mainBtn{
+    -fx-background-color :#038af4;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 5,5,5,5;
+    -fx-pref-width: 100;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-focus-color: transparent;
+     -fx-base: coral;
+}
+.mainBtn:hover{
+    -fx-background-color :#72bdf7;
+}
+
+.shopPadding{
+    -fx-padding: 10 0 10 0;
+}
+
+
+.menuBox{
+    -fx-spacing: 5;
+}
+.menuBtn{
+    -fx-pref-width: 65;
+}
+
+.menuTop{
+    -fx-spacing: 400;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #FF322B;
+}
+
+.item{
+    -fx-background-radius: 10;
+    -fx-background-color: #8c8014;
+    -fx-border-width: 3;
+    -fx-border-color: #eeac07;
+    -fx-border-radius: 10;
+}
+
+.smallSpacing{
+    -fx-spacing : 10;
+}
+
