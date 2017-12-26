@@ -17,6 +17,8 @@ public class Shop implements Serializable{
         _shop.add(new SkinItem("Blue", 10));
         _shop.add(new SkinItem("Green", 15));
         _shop.add(new SkinItem("Yellow", 25));
+        _shop.add(new SkinItem("HuaJi", 50));
+        _shop.add(new SkinItem("GrassSnake",100));
 
     }
 

@@ -1,7 +1,7 @@
 package sample.gameplay;
 
 public enum SnakeSkin {
-    Black, Red, Green, Blue, Yellow;
+    Black, Red, Green, Blue, Yellow, Test, HuaJi, GreenReal;
 
 
 

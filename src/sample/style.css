@@ -6,7 +6,7 @@
 
 .gameBackground{
 
-    -fx-background-color: #3cda05;
+    -fx-background-color: #95cdff;
 
 
     -fx-max-width: 500;
@@ -43,13 +43,13 @@
 }
 
 .menuTop{
-    -fx-spacing: 400;
-    -fx-border-width: 0 0 1 0;
+    -fx-spacing: 420;
+    -fx-border-width: 0 0 2 0;
     -fx-border-color: #FF322B;
 }
 
 .item{
-    -fx-background-radius: 10;
+    -fx-background-radius: 12;
     -fx-background-color: #8c8014;
     -fx-border-width: 3;
     -fx-border-color: #eeac07;

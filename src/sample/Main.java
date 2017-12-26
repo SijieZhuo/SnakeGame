@@ -15,6 +15,8 @@ public class Main extends Application {
         primaryStage.setTitle("Snake Evolution");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
+        primaryStage.setWidth(605);
+        primaryStage.setHeight(430);
         primaryStage.show();
 
 

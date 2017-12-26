@@ -26,8 +26,8 @@ public class Snake{
         _size = size;
         snakebody = new Group();
         snake = snakebody.getChildren();
-        currentSkin = data.getCurrentSkin();
-
+       // currentSkin = data.getCurrentSkin();
+        currentSkin = SnakeSkin.GreenReal;
 
 
         initialize(x,y);
@@ -79,24 +79,62 @@ public class Snake{
                 _tail.setTranslateY(snake.get(0).getTranslateY());
                 break;
         }
-            snake.add(0, _tail);
-            skinUpdate();
+        snake.add(0, _tail);
+        skinUpdate();
     }
 
     public void skinUpdate(){
 
+        for (int i = 0; i < snake.size(); i++){
 
-
-        for(Node n : snake){
-
-            if(n instanceof SnakeBody){
-                if(n == snake.get(0)){
-                     ((SnakeBody) n).setBodyType(SnakeBodyType.Head);
-                } else {
-                    ((SnakeBody) n).setBodyType(SnakeBodyType.Body);
-                }
-                ((SnakeBody) n).setSkin(currentSkin);
+            if (i == 0){
+                ((SnakeBody)snake.get(0)).setBodyType(SnakeBodyType.Head);
+                ((SnakeBody)snake.get(0)).setDirection(bodyDirection(0,1));
+            } else if(i < snake.size()-1){
+                ((SnakeBody)snake.get(i)).setBodyType(SnakeBodyType.Body);
+                ((SnakeBody)snake.get(i)).setDirection(bodyDirection(i,i+1));
+            } else{
+                ((SnakeBody)snake.get(i)).setBodyType(SnakeBodyType.Tail);
+                ((SnakeBody)snake.get(i)).setDirection(bodyDirection(i,i-1));
             }
+            ((SnakeBody)snake.get(i)).setSkin(currentSkin);
+
+        }
+
+//        for(Node n : snake){
+//
+//            if(n instanceof SnakeBody){
+//                if(n == snake.get(0)){
+//                    ((SnakeBody) n).setBodyType(SnakeBodyType.Head);
+//                } else {
+//                    ((SnakeBody) n).setBodyType(SnakeBodyType.Body);
+//                }
+//                ((SnakeBody) n).setSkin(currentSkin);
+//            }
+//        }
+    }
+
+    public Direction headDirection (){
+        return bodyDirection(0,1);
+    }
+
+    public Direction tailDirection(){
+        return bodyDirection(snake.size()-1, snake.size()-2);
+    }
+
+    private Direction bodyDirection(int first, int second){
+
+        if(snake.get(first).getTranslateX() == snake.get(second).getTranslateX() &&
+                snake.get(first).getTranslateY() < snake.get(second).getTranslateY()){
+            return Direction.UP;
+        } else if (snake.get(first).getTranslateX() == snake.get(second).getTranslateX() &&
+                snake.get(first).getTranslateY() > snake.get(second).getTranslateY()){
+            return Direction.DOWN;
+        } else if (snake.get(first).getTranslateX() < snake.get(second).getTranslateX() &&
+                snake.get(first).getTranslateY() == snake.get(second).getTranslateY()){
+            return Direction.LEFT;
+        } else{
+            return Direction.RIGHT;
         }
     }
 

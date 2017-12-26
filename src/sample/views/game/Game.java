@@ -40,7 +40,7 @@ public class Game extends AnchorPane implements Initializable {
     private
 
     @FXML
-    AnchorPane pane;
+    AnchorPane pane, outerPane;
 
     @FXML
     Button back;
@@ -127,9 +127,9 @@ public class Game extends AnchorPane implements Initializable {
         boolean collide = false;
         Node head = snake.getSnake().get(0);
         if (head.getTranslateX()>=APP_W
-                || head.getTranslateX()<=0
+                || head.getTranslateX()<0
                 || head.getTranslateY()>=APP_H
-                || head.getTranslateY()<=0){
+                || head.getTranslateY()<0){
             collide = true;
         }
         return collide;
@@ -230,5 +230,6 @@ public class Game extends AnchorPane implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.setMaxSize(APP_W,APP_H);
+        outerPane.setStyle("-fx-background-color: white;");
     }
 }

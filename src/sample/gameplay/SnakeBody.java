@@ -8,10 +8,13 @@ public class SnakeBody extends Rectangle {
 
     private SnakeBodyType type;
 
+    private Direction direction;
+
     public SnakeBody(int size){
         this.setWidth(size);
         this.setHeight(size);
         type = SnakeBodyType.Body;
+        direction = Direction.RIGHT;
     }
 
 
@@ -27,5 +30,13 @@ public class SnakeBody extends Rectangle {
 
     public SnakeBodyType getType() {
         return type;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public Direction getDirection() {
+        return direction;
     }
 }
