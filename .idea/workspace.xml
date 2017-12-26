@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/imageSource/HuaJi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/imageSource/greenSnake/body.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/imageSource/greenSnake/head.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/imageSource/greenSnake/tail.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/imageSource/head1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameData" afterPath="$PROJECT_DIR$/gameData" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Snake/sample/style.css" afterPath="$PROJECT_DIR$/out/production/Snake/sample/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Snake/sample/views/game/game.fxml" afterPath="$PROJECT_DIR$/out/production/Snake/sample/views/game/game.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/gameplay/Shop.java" afterPath="$PROJECT_DIR$/src/sample/gameplay/Shop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/gameplay/Skins.java" afterPath="$PROJECT_DIR$/src/sample/gameplay/Skins.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/gameplay/Snake.java" afterPath="$PROJECT_DIR$/src/sample/gameplay/Snake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/gameplay/SnakeBody.java" afterPath="$PROJECT_DIR$/src/sample/gameplay/SnakeBody.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java" afterPath="$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/style.css" afterPath="$PROJECT_DIR$/src/sample/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/game/Game.java" afterPath="$PROJECT_DIR$/src/sample/views/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/game/game.fxml" afterPath="$PROJECT_DIR$/src/sample/views/game/game.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shop.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Shop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Shop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="438">
               <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -170,29 +154,29 @@
       <file leaf-file-name="Skins.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Skins.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="1242">
+              <caret line="70" column="27" lean-forward="false" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1506#1507#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1595#1596#0" expanded="true" />
-                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1250#1251#0" expanded="true" />
+                <element signature="e#1291#1292#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1514#1515#0" expanded="true" />
+                <element signature="e#1556#1557#0" expanded="true" />
                 <element signature="method#getInstance#0;class#Skins#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SnakeSkin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SnakeSkin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            <state relative-caret-position="162">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -278,10 +262,10 @@
         <option value="$PROJECT_DIR$/src/sample/views/game/Game.java" />
         <option value="$PROJECT_DIR$/src/sample/gameplay/SnakeBody.java" />
         <option value="$PROJECT_DIR$/src/sample/style.css" />
-        <option value="$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java" />
-        <option value="$PROJECT_DIR$/src/sample/gameplay/Skins.java" />
         <option value="$PROJECT_DIR$/src/sample/gameplay/Snake.java" />
         <option value="$PROJECT_DIR$/src/sample/gameplay/Shop.java" />
+        <option value="$PROJECT_DIR$/src/sample/gameplay/Skins.java" />
+        <option value="$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java" />
       </list>
     </option>
   </component>
@@ -1011,33 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Skins.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1506#1507#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1637#1638#0" expanded="true" />
-            <element signature="method#getInstance#0;class#Skins#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1053,11 +1010,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Shop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="438">
           <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gameplay/Skins.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="70" column="27" lean-forward="false" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1514#1515#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+            <element signature="method#getInstance#0;class#Skins#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/gameplay/SnakeSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
