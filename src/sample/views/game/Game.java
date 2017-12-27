@@ -230,6 +230,6 @@ public class Game extends AnchorPane implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.setMaxSize(APP_W,APP_H);
-        outerPane.setStyle("-fx-background-color: white;");
+        outerPane.setStyle("-fx-background-image: url(\"/sample/imageSource/background/background.png \")");
     }
 }
